@@ -2,8 +2,11 @@ package com.example.homework1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.View
 import android.widget.*
+import android.*
+import android.widget.Toast
 import org.w3c.dom.Text
 
 
@@ -46,6 +49,11 @@ class MainActivity : AppCompatActivity() {
             show.text=calculate(flag,x).toString() + " JD"
 
 
+        }
+        override fun onCreateOptionsMenu(menu:Menu):Boolean{
+            val inflater=menuInflater
+            inflater.inflate(R.menu.star_menu,menu)
+            return super.onCreateOptionsMenu(menu)
         }
 
     }
