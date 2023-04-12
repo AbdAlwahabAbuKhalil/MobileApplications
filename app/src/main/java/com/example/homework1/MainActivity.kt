@@ -6,6 +6,13 @@ import android.view.Menu
 import android.view.View
 import android.widget.*
 import android.*
+import android.view.MenuItem
+import androidx.constraintlayout.widget.ConstraintLayout
+import android.widget.Button
+import android.widget.RadioButton
+import android.widget.RadioGroup
+import androidx.fragment.app.DialogFragment
+
 import android.widget.Toast
 import org.w3c.dom.Text
 
@@ -19,6 +26,8 @@ class MainActivity : AppCompatActivity() {
         val foodType:Spinner=findViewById(R.id.spinnerType)
         val price:TextView=findViewById(R.id.pricePiece)
         var flag:String="Shawrma"
+        
+
         number.setText("1")
 
         var options= arrayOf("Shawrma","Pizza")
@@ -50,14 +59,22 @@ class MainActivity : AppCompatActivity() {
 
 
         }
-        override fun onCreateOptionsMenu(menu:Menu):Boolean{
-            val inflater=menuInflater
-            inflater.inflate(R.menu.star_menu,menu)
-            return super.onCreateOptionsMenu(menu)
-        }
+
 
     }
+    override fun onCreateOptionsMenu(menu:Menu):Boolean{
+        val inflater=menuInflater
+        inflater.inflate(R.menu.star_menu,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        var RateDialog=RateDialogClass()
+        RateDialog.show(supportFragmentManager,"Rate")
+
+        return true;
+    }
 
 
 }
