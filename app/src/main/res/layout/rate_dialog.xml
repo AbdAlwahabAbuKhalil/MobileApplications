@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/rateRadioGroup"
+        android:layout_width="290dp"
+        android:layout_height="258dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/star9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 star" />
+
+        <RadioButton
+            android:id="@+id/star2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2 star" />
+
+        <RadioButton
+            android:id="@+id/star3"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:text="3 star" />
+
+        <RadioButton
+            android:id="@+id/star4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4 star" />
+
+        <RadioButton
+            android:id="@+id/star5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5 Star" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rateRadioGroup" />
+
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="216dp"
+        android:text="Cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rateRadioGroup" />
+</androidx.constraintlayout.widget.ConstraintLayout>
