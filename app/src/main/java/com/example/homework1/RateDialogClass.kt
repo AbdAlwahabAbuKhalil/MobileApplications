@@ -24,9 +24,9 @@ class RateDialogClass:DialogFragment(R.layout.rate_dialog) {
             val selectedOption:Int=radioGroup.checkedRadioButtonId
             val radioButton=view.findViewById<RadioButton>(selectedOption)
 
-            if(radioButton.isChecked){
+            if(selectedOption==-1){
 
-            Toast.makeText(context,radioButton.text.toString().plus(" ").plus("was clicked"),Toast.LENGTH_SHORT).show()
+           Toast.makeText(context,"nothing was clicked",Toast.LENGTH_SHORT).show()
             dismiss()}
 
             Toast.makeText(context,"Nothing selected",Toast.LENGTH_SHORT).show()
