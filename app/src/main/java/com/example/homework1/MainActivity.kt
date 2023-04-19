@@ -49,10 +49,11 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
 
-        var id: String = item.itemId.toString()
-        //Toast.makeText(this,id,Toast.LENGTH_SHORT).show()
-
-        if (id == "2131231137") {
+        //var id: String = item.itemId.toString()
+        var title:String=item.title.toString()
+        //Toast.makeText(this,title,Toast.LENGTH_SHORT).show()
+        //2131231137
+        if (title == "Rate") {
             var RateDialog = RateDialogClass()
             RateDialog.show(supportFragmentManager, "Rate")
         } else {
